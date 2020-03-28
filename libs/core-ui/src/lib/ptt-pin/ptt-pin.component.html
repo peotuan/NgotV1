@@ -1,0 +1,21 @@
+<div class="ptt-pin-input">
+  <label class="ptt-pin-input-wrapper" [for]="compId">
+    <div class="ptt-pin-row">
+      <div class="ptt-pin-cell" *ngFor="let pin of pinList; index as index" [class.flash-ring]="isFocus && showFlashRing && pinValue.length === index">
+        <ng-container *ngIf="showPinCode; else showBackground">{{ pin }}</ng-container>
+        <ng-template #showBackground>
+          <div class="ptt-pin-bg" [class.show]="pin"></div>
+        </ng-template>
+        <div *ngIf="showCursor" class="flash" [ngClass]="{
+          show: pinValue.length === index,
+          animated: isFocus
+        }">
+          <p>_</p>
+        </div>
+      </div>
+    </div>
+  </label>
+  <input [type]="type" class="ptt-pin ptt-pin-to-click" [attr.maxlength]="length" [id]="compId" [value]="pinValue" (input)="updatePIN($event)"
+    (focusin)="focusInput($event)" autocomplete="off" (focusout)="focusoutInput($event)" (blur)="onBlur()" (focus)="onFocus()"
+    #inp>
+</div>

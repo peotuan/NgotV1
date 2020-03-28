@@ -1,0 +1,40 @@
+$colors: (
+  main: #f3a5f3
+);
+
+$breakpoints: (
+  phone: 360px,
+  phablet: 540px,
+  tablet: 768px,
+  desktop-md: 992px,
+  desktop: 1200px,
+  desktop-wide: 1440px
+);
+
+@mixin mq($width, $type: min) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+    @if $type == max {
+      $width: $width - 1px;
+    }
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
+
+@function getColor($name) {
+  @return map-get($colors, $name);
+}
+
+@mixin btn-outline ($color) {
+  background-color: #fff;
+  color: getColor($color);
+  border-color: getColor($color);
+}
+
+@mixin btn ($color) {
+  background-color: getColor($color);
+  color: #FFF;
+  border-color: getColor($color);
+}
