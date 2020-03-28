@@ -6,7 +6,7 @@ import { MenuList } from '../../shared/menu-list';
   templateUrl: './nav-bar.component.html',
   styleUrls: ['./nav-bar.component.scss']
 })
-export class NavBarComponent implements OnInit {
+export class NavBarComponent {
   modulesList: Array<any>;
   enteredButton = false;
   isMatMenuOpen = false;
@@ -16,8 +16,6 @@ export class NavBarComponent implements OnInit {
   constructor(private ren: Renderer2) {
     this.modulesList = MenuList;
   }
-
-  ngOnInit() {}
 
   menuenter() {
     this.isMatMenuOpen = true;
@@ -30,9 +28,9 @@ export class NavBarComponent implements OnInit {
     setTimeout(() => {
       if (!this.isMatMenu2Open && !this.enteredButton) {
         this.isMatMenuOpen = false;
-        trigger.closeMenu();
         this.ren.removeClass(button._elementRef.nativeElement, 'cdk-focused');
         this.ren.removeClass(button._elementRef.nativeElement, 'cdk-program-focused');
+        trigger.closeMenu();
       } else {
         this.isMatMenuOpen = false;
       }
@@ -46,12 +44,13 @@ export class NavBarComponent implements OnInit {
   menu2Leave(trigger1, trigger2, button) {
     setTimeout(() => {
       if (this.isMatMenu2Open) {
-        trigger1.closeMenu();
         this.isMatMenuOpen = false;
         this.isMatMenu2Open = false;
         this.enteredButton = false;
         this.ren.removeClass(button._elementRef.nativeElement, 'cdk-focused');
         this.ren.removeClass(button._elementRef.nativeElement, 'cdk-program-focused');
+        trigger1.closeMenu();
+
       } else {
         this.isMatMenu2Open = false;
         trigger2.closeMenu();

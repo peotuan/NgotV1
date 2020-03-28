@@ -6,15 +6,12 @@ import { AboutComponent } from './about/about.component';
 const routes: Routes = [
   {
     path: '',
-    component: LayoutComponent,
-    children: [
-      {
-        path: 'about',
-        component: AboutComponent
-      }
-    ]
+    component: LayoutComponent
   },
-  {}
+  {
+    path: 'about',
+    component: AboutComponent
+  },
 ];
 
 @NgModule({

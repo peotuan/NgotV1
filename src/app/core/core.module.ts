@@ -17,6 +17,7 @@ import { NavBarComponent } from './component/nav-bar/nav-bar.component';
   declarations: [AppComponent, LayoutNavComponent, LayoutComponent, NavBarComponent],
   imports: [BrowserModule, RouterModule, CommonModule, RouterModule, CoreMaterialModule, CarouselModule],
   exports: [AppComponent],
+  entryComponents: [LayoutComponent],
   providers: [
     {
       provide: ErrorHandler,

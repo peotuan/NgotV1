@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LayoutComponent } from './core/container/layout/layout.component';
 
 const routes: Routes = [
   {
@@ -11,11 +10,19 @@ const routes: Routes = [
         pathMatch: 'full',
         redirectTo: '/home'
       }
+      // {
+      //   path: '**',
+
+      // }
     ]
   },
   {
     path: 'home',
-    loadChildren: './main/main.module#MainModule'
+    loadChildren: () => import('./main/main.module').then(m => m.MainModule)
+  },
+  {
+    path: 'user',
+    loadChildren: () => import('./user/user.module').then(m => m.UserModule)
   }
 ];
 
