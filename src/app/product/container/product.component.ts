@@ -5,7 +5,6 @@ import { MenuList } from 'src/app/core/shared/menu-list';
   selector: 'app-product',
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.scss'],
-  encapsulation: ViewEncapsulation.None
 })
 export class ProductComponent implements OnInit {
   public navList: Array<any>;
