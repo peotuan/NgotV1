@@ -25,6 +25,13 @@ export class LayoutNavComponent implements OnInit {
     { image: 'assets/category/cooky.png', id: 3 }
   ];
 
+  public categoryItem = [
+    {image: 'assets/product/csgn.jpg', id: 0},
+    {image: 'assets/product/csgn.jpg', id: 1},
+    {image: 'assets/product/csgn.jpg', id: 2},
+    {image: 'assets/product/csgn.jpg', id: 3},
+  ];
+
   customOptions: OwlOptions = {
     loop: true,
     mouseDrag: true,

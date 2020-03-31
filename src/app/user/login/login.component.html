@@ -1,6 +1,35 @@
 <div class="user">
-    <div class="user-nav">
-        <a [routerLink]="['/user/login']" class="active">đăng nhập</a>
-        <a [routerLink]="['/user/register']">đăng ký</a>
+  <div class="user-nav">
+    <a [routerLink]="['/user/login']" class="active">đăng nhập</a>
+    <a [routerLink]="['/user/register']">đăng ký</a>
+  </div>
+  <form [formGroup]="loginForm">
+    <div class="form-group">
+      <input formControlName="username" type="text" placeholder="Nhập email hoặc tên đăng nhập" />
+      <div *ngIf="loginForm.get('username').hasError('required') && loginForm.get('username').touched">
+        <p class="error-message">Sai tên đăng nhập hoặc email</p>
+      </div>
     </div>
+
+    <div class="form-group">
+      <input formControlName="password" type="password" placeholder="Mật khẩu" />
+      <div *ngIf="loginForm.get('password').hasError('required') && loginForm.get('password').touched">
+        <p class="error-message">Sai mật khẩu</p>
+      </div>
+    </div>
+
+    <div class="submit-section text-center">
+      <button class="btn btn-main-bg full text-uppercase">
+        Đăng nhập
+      </button>
+      <a [routerLink]="['/forgot-password']">Quên mật khẩu?</a>
+      <p class="clearfix">Hoặc đăng nhập với</p>
+      <div class="fb">
+        <a href=""><i class="fa fa-facebook"></i>Đăng nhập bằng Facebook</a>
+      </div>
+      <div class="google">
+        <a href=""><i class="fa fa-google"></i>Đăng nhập bằng google</a>
+      </div>
+    </div>
+  </form>
 </div>

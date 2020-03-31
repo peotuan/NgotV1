@@ -26,3 +26,33 @@ a {
 .pointer {
   cursor: pointer;
 }
+
+.full {
+  width: 100%;
+}
+
+.form-group input {
+  font-size: 15px;
+  width: 100%;
+  clear: both;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+}
+.fb {
+  width: 100%;
+  border-radius: 3px;
+  background: #2e4b88;
+  display: inline-block;
+  font-weight: normal;
+  margin-top: 20px;
+  a {
+    padding: 8px 0;
+    display: block;
+    font-size: 14px;
+    color: white;
+  }
+}
+.google {
+  @extend .fb;
+  background: #ea4235;
+}

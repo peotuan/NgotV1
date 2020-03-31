@@ -165,3 +165,15 @@ footer {
 .nav-bar {
   background-color: getColor(main);
 }
+.user-nav {
+  list-style: none;
+  margin-bottom: 0;
+  li {
+    display: inline-block;
+  }
+}
+.user-section {
+  height: 100%;
+  align-items: center !important;
+  padding-bottom: 50px;
+}

@@ -1,0 +1,26 @@
+@import 'theme/variables';
+
+/* Color filler*/
+.fill-main {
+    color: getColor(main)
+}
+.fill-white {
+    color: getColor(white)
+}
+
+/* Background filler */
+.bg-main {
+    background-color: getColor(main);
+}
+
+
+/* Button filler */
+.btn {
+    &.btn-main {
+        color: getColor(main)
+    }
+    &.btn-main-bg {
+        background-color: getColor(main);
+        color: #fff;
+    }
+}

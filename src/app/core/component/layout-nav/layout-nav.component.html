@@ -1,13 +1,10 @@
 <div class="container">
-
   <owl-carousel-o [options]="customOptions">
- 
     <ng-container *ngFor="let slide of categoryHeadList">
       <ng-template carouselSlide [id]="slide.id">
-        <img [src]="slide.image" [alt]="" [title]="slide.id">
+        <img [src]="slide.image" [alt]="" [title]="slide.id" />
       </ng-template>
     </ng-container>
- 
   </owl-carousel-o>
 
   <div class="row for-product-item">
@@ -40,10 +37,31 @@
   <div class="row for-category-item">
     <h2 class="title">Chủ đề mới</h2>
 
-    <div class="row category-header">
-      <div class="col-md-3 col-sm-12 pointer" *ngFor="let item of categoryHeadList">
-        <img [src]="item.image" alt="" />
+    <div class="category-header">
+      <div class="row">
+        <div class="col-md-3 col-sm-12 pointer" *ngFor="let itemList of categoryHeadList">
+          <img [src]="itemList.image" alt="" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="product-item col-md-3 col-xs-12" *ngFor="let item of categoryItem">
+          <div class="image">
+            <a href="">
+              <img [src]="item.image" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="text-center">
+        <button class="btn btn-main-bg">XEM THÊM</button>
       </div>
     </div>
+  </div>
+
+  <div class="row new-collection">
+    <h2 class="title">
+      <a href="">Bộ sưu tập</a>
+    </h2>
   </div>
 </div>

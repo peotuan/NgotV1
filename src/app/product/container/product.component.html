@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-md-3 col-xs-12">
+    <ul>
+      <li *ngFor="let nav of navList">
+        {{ nav.label }}
+        <ul *ngIf="nav.children.length > 0">
+          <li *ngFor="let children of nav.children">
+            {{ children.label }}
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="col-md-9 col-xs-12"></div>
