@@ -1,0 +1,70 @@
+<div class="row">
+  <!-- thông tin -->
+  <div class="col-md-5 image-container">
+    <img class="preview" src="assets/product/dep.jpg" alt="" />
+  </div>
+
+  <div class="col-md-7 detail-container">
+    <div class="name-section">
+      <h1>{{ detailProduct.name }}</h1>
+      <div class="code">Mã sản phẩm: {{ detailProduct.code }}</div>
+    </div>
+    <div class="action-section d-inline-flex pull-right">
+        <div class="share">
+            <i class="fa fa-share-alt" (click)="shareIconClick()"></i>
+        </div>
+        <div class="wish">
+            <i class="fa fa-heart-o"></i>
+        </div>
+        <div class="share-icon d-block full clearfix" [ngClass]="{'open': isShowShare === true}">
+            <strong>Chia sẻ đến:</strong>
+            <a href="" data-label="facebook" class="d-inline-flex align-items-center justify-content-center">
+                <i class="fa fa-facebook"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="price-section">
+      <span>{{ detailProduct.price }}</span>
+    </div>
+
+    <div class="product-attribute-section">
+      <div class="d-flex align-items-center color">
+        <label for="" class="pull-left">Màu sắc </label>
+      </div>
+      <div class="d-flex align-items-center">
+        <label for="" class="pull-left">Kích thước</label>
+        <div class="pull-left">
+          <a class="size" *ngFor="let item of detailProduct.size">{{ item }}</a>
+        </div>
+      </div>
+      <div class="d-flex align-items-center">
+        <label for="" class="pull-left">Số lượng</label>
+      </div>
+      <div class="d-flex align-items-center clearfix button-section">
+        <div class="btn btn-main-bg">Thêm vào giỏ hàng</div>
+        <div class="btn btn-main-bg">Mua ngay</div>
+      </div>
+    </div>
+
+    <div class="info-section">
+      <div class="row">
+        <div class="item col-md-4 col-sm-12 col-xs-12 d-flex align-items-center ship">
+          Giao hàng toàn quốc đơn hàng từ 100k
+        </div>
+        <div class="item col-md-4 col-sm-12 col-xs-12 d-flex align-items-center cod">COD nội thành HN, HCM</div>
+        <div class="item col-md-4 col-sm-12 col-xs-12 d-flex align-items-center refund">Đổi trả trong 24h</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mô tả -->
+  <div class="full-preview col-md-12 col-sm-12 col-xs-12">
+    <span>Mô tả sản phẩm</span>
+    <div class="content full clearfix">
+      <p>
+        <img src="assets/product/dep.jpg" alt="" />
+      </p>
+    </div>
+  </div>
+</div>

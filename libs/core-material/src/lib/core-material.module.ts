@@ -32,7 +32,8 @@ const NG_MODULES = [
   MatNativeDateModule,
   MatPaginatorModule,
   MatTabsModule,
-  MatMenuModule
+  MatMenuModule,
+  
 ];
 
 @NgModule({

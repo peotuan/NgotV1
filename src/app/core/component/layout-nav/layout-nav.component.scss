@@ -30,7 +30,6 @@
 .name {
   line-height: 1.5;
   margin: 12px 0;
-  font-size: 15px;
   min-height: 44px;
   color: #333;
   font-family: 'Nunito-Bold';
@@ -47,8 +46,11 @@
   }
 }
 
-// .price {
-// }
+.price {
+  font-size: 17px;
+  color: #000;
+  font-weight: 700;
+}
 
 .category-header {
   img {

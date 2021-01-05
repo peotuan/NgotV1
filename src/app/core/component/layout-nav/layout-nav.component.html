@@ -18,13 +18,13 @@
       <div class="product-item col-md-3 col-xs-12" *ngFor="let item of itemProductList">
         <div class="image">
           <span class="flag">New</span>
-          <a href="">
+          <a [routerLink]="['/product/product-detail']" >
             <img [src]="item.image" alt="" />
           </a>
         </div>
 
         <h3 class="name">
-          <a href="" [title]="item.name">{{ item.name }}</a>
+          <a [routerLink]="['/product/product-detail']" [title]="item.name">{{ item.name }}</a>
         </h3>
 
         <div class="price">

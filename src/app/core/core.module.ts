@@ -12,10 +12,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { LayoutComponent } from './container/layout/layout.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { NavBarComponent } from './component/nav-bar/nav-bar.component';
+import { LivechatWidgetModule } from '@livechat/angular-widget';
 
 @NgModule({
   declarations: [AppComponent, LayoutNavComponent, LayoutComponent, NavBarComponent],
-  imports: [BrowserModule, RouterModule, CommonModule, RouterModule, CoreMaterialModule, CarouselModule],
+  imports: [BrowserModule, RouterModule, CommonModule, RouterModule, CoreMaterialModule, CarouselModule, LivechatWidgetModule],
   exports: [AppComponent],
   entryComponents: [LayoutComponent],
   providers: [

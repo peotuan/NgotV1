@@ -64,7 +64,7 @@
                 <a [routerLink]="['/user/login']">ĐĂNG NHẬP |</a>
               </li>
               <li>
-                <a [routerLink]="['/user/register']">   ĐĂNG KÝ</a>
+                <a [routerLink]="['/user/register']"> ĐĂNG KÝ</a>
               </li>
             </ul>
           </div>
@@ -89,10 +89,13 @@
     <div class="container"></div>
   </div>
 </footer>
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- 
+<livechat-widget
+  #liveChatWidget
+  licenseId="11082047"
+  (onChatLoaded)="onChatLoaded($event)"
+  (onChatWindowOpened)="onChatWindowOpened()"
+  (onChatWindowMinimized)="onChatWindowMinimized()"
+  [visitor]="visitor"
+  [params]="params"
+></livechat-widget> -->

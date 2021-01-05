@@ -1,0 +1,169 @@
+@import 'variables';
+
+.preview {
+  max-height: 540px;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  transition: all 0.4s;
+}
+
+.name-section {
+  display: inline-flex;
+  flex-wrap: wrap;
+  width: 86%;
+  margin-bottom: 20px;
+  .title {
+    font-size: 25px;
+    letter-spacing: 0;
+    margin-bottom: 5px;
+    line-height: 1.4;
+  }
+  .code {
+    font-size: 15px;
+    color: #9d9d9d;
+    clear: both;
+    display: block;
+    width: 100%;
+  }
+}
+
+.product-attribute-section {
+  margin: 0 15px 0 0;
+  font-size: 18px;
+  min-width: 85px;
+}
+
+.size {
+  display: inline-block;
+  padding: 5px 9px;
+  background: #fff;
+  color: grey;
+  border: 1px solid #a2a2a2;
+  font-size: 12px;
+  margin: 0 5px;
+  border-radius: 3px;
+  min-width: 30px;
+  &:hover {
+    color: #fff;
+    background: getColor(main);
+    border: 1px solid getColor(main);
+  }
+}
+
+.button-section {
+  .btn {
+    cursor: pointer;
+    width: 49%;
+    padding: 0.6rem 1rem;
+    text-transform: uppercase;
+    margin-right: 1%;
+  }
+}
+.d-flex.align-items-center {
+  margin-bottom: 25px;
+  label {
+    margin: 0 15px 0 0;
+    font-size: 18px;
+    min-width: 85px;
+  }
+}
+
+.info-section {
+  border-top: 2px solid #b7b7b7;
+  padding-top: 15px;
+  margin-top: 15px;
+  display: inline-block;
+  .ship {
+    flex: 0 0 40%;
+    max-width: 40%;
+    padding-right: 15px;
+  }
+  .cod {
+    flex: 0 0 30%;
+    max-width: 30%;
+    padding-right: 15px;
+  }
+  .refund {
+    flex: 0 0 30%;
+    max-width: 30%;
+  }
+}
+.full-preview {
+  padding: 20px;
+  margin: 70px 0 60px;
+  border: 1px solid rgba(112, 112, 112, 0.65);
+  .content {
+    text-align: justify;
+    line-height: 1.7;
+    font-size: 15px;
+  }
+}
+
+.action-section {
+  float: right;
+  font-size: 32px;
+  .share {
+    margin-right: 10px;
+  }
+  .share:hover, .wish:hover {
+    color: getColor(main);
+    cursor: pointer;
+  }
+  .share-icon {
+    min-width: 195px;
+    position: absolute;
+    right: 0;
+    top: 50px;
+    border-radius: 8px;
+    border: 1px solid getColor(main);
+    width: auto;
+    background: #fff;
+    padding: 8px 26px;
+    font-size: 16px;
+    z-index: -100;
+    opacity: 0;
+    transition: all 0.3s;
+    transform: translateY(80%);
+    font-family: 'Nunito-Bold';
+    &::before {
+      z-index: 1;
+      content: '';
+      width: 20px;
+      height: 20px;
+      border: 1px solid getColor(main);
+      border-right: none;
+      border-bottom: none;
+      background: #fff;
+      position: absolute;
+      right: 36px;
+      top: -10px;
+      transform: rotate(45deg);
+    }
+    &.open {
+      z-index: 1;
+      opacity: 1;
+      transition: all 0.3s;
+      transform: translateY(0);
+    }
+  }
+
+  .share-icon a {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #ffb0bd;
+    color: #fff;
+    font-size: 15px;
+    z-index: 2;
+    position: relative;
+    transition: all 0.3s;
+    &[data-label='facebook'] {
+      background: #314a7e;
+    }
+    &:hover {
+      background: #537bce;
+    }
+  }
+}

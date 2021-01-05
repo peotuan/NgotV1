@@ -8,21 +8,23 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 })
 export class LayoutNavComponent implements OnInit {
   public itemProductList = [
-    { name: 'Sách giáo khoa', image: 'assets/product/sach-giao-khoa-toan-lop-5.jpg', price: '40.000đ' },
-    { name: 'Sách giáo khoa', image: 'assets/product/sach-giao-khoa-toan-lop-5.jpg', price: '40.000đ' },
-    { name: 'Sách giáo khoa', image: 'assets/product/sach-giao-khoa-toan-lop-5.jpg', price: '40.000đ' },
-    { name: 'Sách giáo khoa', image: 'assets/product/sach-giao-khoa-toan-lop-5.jpg', price: '40.000đ' },
-    { name: 'Sách giáo khoa', image: 'assets/product/sach-giao-khoa-toan-lop-5.jpg', price: '40.000đ' },
-    { name: 'Sách giáo khoa', image: 'assets/product/sach-giao-khoa-toan-lop-5.jpg', price: '40.000đ' },
-    { name: 'Sách giáo khoa', image: 'assets/product/sach-giao-khoa-toan-lop-5.jpg', price: '40.000đ' },
-    { name: 'Sách giáo khoa', image: 'assets/product/sach-giao-khoa-toan-lop-5.jpg', price: '40.000đ' }
+    { name: 'Sách giáo khoa', image: 'assets/product/khung-long.jpg', price: '40.000đ' },
+    { name: 'Sách giáo khoa', image: 'assets/product/khung-long.jpg', price: '40.000đ' },
+    { name: 'Sách giáo khoa', image: 'assets/product/khung-long.jpg', price: '40.000đ' },
+    { name: 'Sách giáo khoa', image: 'assets/product/khung-long.jpg', price: '40.000đ' },
+    { name: 'Sách giáo khoa', image: 'assets/product/khung-long.jpg', price: '40.000đ' },
+    { name: 'Sách giáo khoa', image: 'assets/product/khung-long.jpg', price: '40.000đ' },
+    { name: 'Sách giáo khoa', image: 'assets/product/khung-long.jpg', price: '40.000đ' },
+    { name: 'Sách giáo khoa', image: 'assets/product/khung-long.jpg', price: '40.000đ' }
   ];
 
   public categoryHeadList = [
     { image: 'assets/category/csgn.png', id: 0 },
     { image: 'assets/category/lycoc.png', id: 1 },
     { image: 'assets/category/gau.png', id: 2 },
-    { image: 'assets/category/cooky.png', id: 3 }
+    { image: 'assets/category/cooky.png', id: 3 },
+    { image: 'assets/category/cooky.png', id: 4 }
+
   ];
 
   public categoryItem = [
